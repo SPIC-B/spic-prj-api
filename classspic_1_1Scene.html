@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SPICPRJ Engine: spic::Transform Class Reference</title>
+<title>SPICPRJ Engine: spic::Scene Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,78 +62,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>spic</b></li><li class="navelem"><a class="el" href="classspic_1_1Transform.html">Transform</a></li>  </ul>
+<li class="navelem"><b>spic</b></li><li class="navelem"><a class="el" href="classspic_1_1Scene.html">Scene</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classspic_1_1Transform-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classspic_1_1Scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">spic::Transform Class Reference</div>  </div>
+<div class="title">spic::Scene Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Instances of this class represent specific 2D transformations.  
- <a href="classspic_1_1Transform.html#details">More...</a></p>
+<p>Class representing a scene which can be rendered by the <a class="el" href="classspic_1_1Camera.html" title="Class representing a point of view towards the game scene.">Camera</a>.  
+ <a href="classspic_1_1Scene.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Transform_8hpp_source.html">Transform.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Scene_8hpp_source.html">Scene.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c76f63d4e5138dc37c6ce363f0736a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspic_1_1Transform.html#a4c76f63d4e5138dc37c6ce363f0736a7">Transform</a> (const <a class="el" href="structspic_1_1Point.html">Point</a> &amp;pos, double rot, double scal)</td></tr>
-<tr class="memdesc:a4c76f63d4e5138dc37c6ce363f0736a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classspic_1_1Transform.html#a4c76f63d4e5138dc37c6ce363f0736a7">More...</a><br /></td></tr>
-<tr class="separator:a4c76f63d4e5138dc37c6ce363f0736a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93b0e10186dff5f5701d5c6262e378e"><td class="memItemLeft" align="right" valign="top"><a id="af93b0e10186dff5f5701d5c6262e378e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspic_1_1Scene.html#af93b0e10186dff5f5701d5c6262e378e">RenderScene</a> ()</td></tr>
+<tr class="memdesc:af93b0e10186dff5f5701d5c6262e378e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called by a <a class="el" href="classspic_1_1Camera.html" title="Class representing a point of view towards the game scene.">Camera</a> to render the scene on the engine. <br /></td></tr>
+<tr class="separator:af93b0e10186dff5f5701d5c6262e378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a073965b459f27d58005051e0138151a6"><td class="memItemLeft" align="right" valign="top"><a id="a073965b459f27d58005051e0138151a6"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="classspic_1_1GameObject.html">GameObject</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspic_1_1Scene.html#a073965b459f27d58005051e0138151a6">contents</a></td></tr>
+<tr class="memdesc:a073965b459f27d58005051e0138151a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This property contains all the Game Object that are contained in this scene. <br /></td></tr>
+<tr class="separator:a073965b459f27d58005051e0138151a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Instances of this class represent specific 2D transformations. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4c76f63d4e5138dc37c6ce363f0736a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c76f63d4e5138dc37c6ce363f0736a7">&#9670;&nbsp;</a></span>Transform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">spic::Transform::Transform </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structspic_1_1Point.html">Point</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rot</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>scal</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Translation (shift). </td></tr>
-    <tr><td class="paramname">rot</td><td>Ratotion, in radians. </td></tr>
-    <tr><td class="paramname">scal</td><td>Scale (multiplication factor). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="Transform_8hpp_source.html">Transform.hpp</a></li>
+<div class="textblock"><p>Class representing a scene which can be rendered by the <a class="el" href="classspic_1_1Camera.html" title="Class representing a point of view towards the game scene.">Camera</a>. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="Scene_8hpp_source.html">Scene.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
